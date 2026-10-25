@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#f8f4ef">
+<title>Mi Estudio</title>
+<style>
+:root {
+  --fondo: #f8f4ef;
+  --rosa: #d7a6ad;
+  --rosa-claro: #f0dfe0;
+  --texto: #51464a;
+  --suave: #897b7e;
+  --blanco: #fffdfb;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--fondo);
+  color: var(--texto);
+  font-family: Georgia, "Times New Roman", serif;
+}
+header {
+  padding: 27px 22px 18px;
+  border-bottom: 1px solid #e8ded8;
+}
+.marca {
+  font-size: 29px;
+  letter-spacing: -1px;
+}
+.subtitulo {
+  font-family: Arial, sans-serif;
+  color: var(--suave);
+  font-size: 12px;
+  letter-spacing: 2px;
+  margin-top: 7px;
+  text-transform: uppercase;
+}
+main { padding: 25px 20px 100px; }
+h1 {
+  font-size: 34px;
+  font-weight: normal;
+  line-height: 1.15;
+  margin: 12px 0;
+}
+.intro {
+  font-family: Arial, sans-serif;
+  color: var(--suave);
+  line-height: 1.6;
+  font-size: 14px;
+}
+.etiqueta {
+  font-family: Arial, sans-serif;
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #a77d83;
+}
+.destacado {
+  margin: 28px 0;
+  padding: 24px 20px;
+  border-radius: 3px;
+  background: var(--rosa-claro);
+}
+.destacado h2 {
+  font-size: 25px;
+  font-weight: normal;
+  margin: 12px 0;
+}
+button {
+  cursor: pointer;
+  border: 0;
+  border-radius: 3px;
+  padding: 13px 17px;
+  background: var(--texto);
+  color: white;
+  font-size: 13px;
+}
+.secundario {
+  background: transparent;
+  color: var(--texto);
+  border: 1px solid #d9c8c5;
+}
+.seccion-titulo {
+  font-size: 24px;
+  font-weight: normal;
+  margin: 30px 0 16px;
+}
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+.modulo {
+  background: var(--blanco);
+  padding: 17px 14px;
+  min-height: 115px;
+  border: 1px solid #eee5df;
+}
+.modulo .numero {
+  font-family: Arial, sans-serif;
+  color: #b58a90;
+  font-size: 11px;
+}
+.modulo h3 {
+  font-size: 18px;
+  font-weight: normal;
+  margin: 13px 0 7px;
+}
+.modulo p {
+  font-family: Arial, sans-serif;
+  font-size: 11px;
+  color: var(--suave);
+  line-height: 1.5;
+  margin: 0;
+}
+nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-around;
+  padding: 12px 4px calc(12px + env(safe-area-inset-bottom));
+  background: rgba(255,253,251,.97);
+  border-top: 1px solid #e8ded8;
+}
+nav button {
+  background: transparent;
+  color: var(--texto);
+  padding: 8px 5px;
+  font-size: 11px;
+}
+nav button.activo { color: #ad7881; }
+#mensaje {
+  margin-top: 15px;
+  font-family: Arial, sans-serif;
+  font-size: 13px;
+  line-height: 1.6;
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="marca">Mi Estudio <span style="color:#c9949c">✳</span></div>
+  <div class="subtitulo">Un espacio para celebrar bonito</div>
+</header>
+<main>
+  <div class="etiqueta">Tu taller creativo</div>
+  <h1>Las ideas bonitas<br>empiezan aquí.</h1>
+  <p class="intro">Diseña, organiza y guarda cada detalle de tus celebraciones en un solo lugar.</p>
+  <section class="destacado">
+    <div class="etiqueta">Tu próximo proyecto</div>
+    <h2>Una celebración<br>hecha a tu manera.</h2>
+    <p class="intro">Crea invitaciones, tarjetas y detalles que tengan tu sello personal.</p>
+    <button onclick="mostrar('estudio')">Entrar al estudio ↗</button>
+  </section>
+  <div class="etiqueta">Todo lo que necesitas</div>
+  <h2 class="seccion-titulo">Tu espacio creativo</h2>
+  <section class="grid">
+    <article class="modulo" onclick="mostrar('estudio')">
+      <div class="numero">01 / CREAR</div>
+      <h3>Estudio</h3>
+      <p>Invitaciones, tarjetas y etiquetas.</p>
+    </article>
+    <article class="modulo" onclick="mostrar('biblioteca')">
+      <div class="numero">02 / GUARDAR</div>
+      <h3>Biblioteca</h3>
+      <p>Diseños, estilos e inspiración.</p>
+    </article>
+    <article class="modulo" onclick="mostrar('celebraciones')">
+      <div class="numero">03 / PLANEAR</div>
+      <h3>Celebraciones</h3>
+      <p>Fechas, invitados y confirmaciones.</p>
+    </article>
+    <article class="modulo" onclick="mostrar('presupuesto')">
+      <div class="numero">04 / ORGANIZAR</div>
+      <h3>Presupuesto</h3>
+      <p>Compras, gastos y proveedores.</p>
+    </article>
+    <article class="modulo" onclick="mostrar('decoracion')">
+      <div class="numero">05 / PREPARAR</div>
+      <h3>Decoración</h3>
+      <p>Ideas, materiales y tareas.</p>
+    </article>
+    <article class="modulo" onclick="mostrar('album')">
+      <div class="numero">06 / RECORDAR</div>
+      <h3>Álbum</h3>
+      <p>Un espacio para las fotografías.</p>
+    </article>
+  </section>
+  <div id="mensaje" aria-live="polite"></div>
+</main>
+<nav>
+  <button class="activo" onclick="mostrar('inicio')">Inicio</button>
+  <button onclick="mostrar('estudio')">Crear</button>
+  <button onclick="mostrar('biblioteca')">Biblioteca</button>
+  <button onclick="mostrar('celebraciones')">Eventos</button>
+</nav>
+<script>
+function mostrar(seccion) {
+  const nombres = {
+    inicio: 'Estás en el inicio de Mi Estudio.',
+    estudio: 'Estudio creativo: aquí construiremos el editor para diseñar y personalizar tus piezas.',
+    biblioteca: 'Biblioteca: aquí podrás guardar y reutilizar diseños, plantillas y estilos.',
+    celebraciones: 'Celebraciones: aquí organizaremos fechas, invitados y confirmaciones.',
+    presupuesto: 'Presupuesto: aquí llevaremos compras, gastos y proveedores.',
+    decoracion: 'Decoración: aquí organizaremos materiales, ideas y tareas.',
+    album: 'Álbum: aquí prepararemos el espacio para compartir fotografías.'
+  };
+  document.getElementById('mensaje').textContent = nombres[seccion] || nombres.inicio;
+  document.querySelectorAll('nav button').forEach(b => b.classList.remove('activo'));
+  const botones = [...document.querySelectorAll('nav button')];
+  const indice = {inicio:0, estudio:1, biblioteca:2, celebraciones:3}[seccion];
+  if (indice !== undefined) botones[indice].classList.add('activo');
+}
+</script>
+</body>
+</html>
